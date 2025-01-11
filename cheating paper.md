@@ -1,3 +1,16 @@
+$.image.init({
+    target:'github',
+    quality:1, //图片压缩开关，1表示原图上传 取值为：0<quality<=1，如果要压缩推荐 0.7
+    github:{
+        Token : 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // 添加一个仅给typora使用的token 授予最小的权限（repo.public_repo） ，添加token：https://github.com/settings/tokens
+        CommitterName : 'nickname', // 提交人昵称，写你github的昵称
+        CommitterEmail : 'email@mail.com', // 提交人邮箱，写你github的邮箱
+        Repository : 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // github项目名，比如你的项目地址是：https://github.com/Thobian/typora-plugins-win-img 那就是后面的“Thobian/typora-plugins-win-img”
+        Filepath : 'typora', // 图片在项目中的保存目录，可以不用提前创建目录，github提交时发现没有会自动创建
+        // 【注意：开启CDN后会将原github的文件地址换成 jsDelivr 的地址，如出现镜像出现国内无法访问，或者不再继续运营你的图片也将不能访问到，请谨慎开启该功能】
+        jsDelivrCND : false, // 是否开启GitHub图片走镜像，国内有时候访问不太方便,如要打开设置为：true
+    }
+});
 一.dfs和bfs模板
 
 ![img](file:///C:\Users\29910\AppData\Local\Temp\ksohtml15928\wps1.jpg) 
